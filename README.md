@@ -1,74 +1,208 @@
-# React + TypeScript + Vite
+# 📅 Interactive Wall Calendar App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Overview
 
-Currently, two official plugins are available:
+The **Interactive Wall Calendar App** is a modern, visually rich calendar application inspired by physical wall calendars. It combines aesthetic design with powerful scheduling features, allowing users to manage events, notes, and date ranges in an intuitive way.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🖼️ Visual Experience
 
-## Expanding the ESLint configuration
+* Monthly **hero images (12 default images)**
+* User can **upload custom images**
+* **Dynamic theming** based on selected image
+* Automatic **fallback to default image** if upload fails
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 📅 Calendar Functionality
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* Monthly calendar view
+* **Date range selection (start → end)**
+* Support for **multiple ranges**
+* Highlighting for:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+  * Start date
+  * End date
+  * In-between dates
+
+---
+
+### 📝 Notes System
+
+* Sticky-notes style **Kanban board layout**
+* Notes support:
+
+  * Title
+  * Description
+  * Single date / date range
+* Two ways to create notes:
+
+  * From calendar selection
+  * Manual "Add Note"
+* Notes are:
+
+  * **Month-specific**
+  * Clickable → highlights corresponding dates
+* Delete notes using **X button**
+
+---
+
+### 🌡️ Heatmap Mode
+
+* Visualizes event density:
+
+  * More events → darker tone
+  * Fewer events → lighter tone
+  * No events → no color
+* Dynamic scaling based on max events
+
+---
+
+### 🌗 Theme Support
+
+* Light & Dark mode
+* Dark mode uses **balanced tones (not overly dark)**
+* Consistent UI color hierarchy
+
+---
+
+### 💎 UI/UX Enhancements
+
+* Smooth transitions and animations
+* Centered modal with backdrop
+* Separate **View vs Edit mode for notes**
+* Responsive design (mobile + desktop)
+
+---
+
+## 🧱 Tech Stack
+
+* **React / Next.js**
+* **TypeScript**
+* **Tailwind CSS**
+* LocalStorage (for persistence)
+
+---
+
+## 📁 Project Structure
+
+```
+/components
+  /Calendar
+    /CalDay.tsx
+    /Calendar.tsx
+    /CalGrid.tsx
+    /HeroImage.tsx
+    /NoteModal.tsx
+    /NotesBoard.tsx
+    /SickyNote.tsx
+
+/hooks
+    /useNotes.ts
+    /useTheme.ts
+    /useWindowWidth.ts
+/utils
+    /calendar.utils.ts
+/types
+    /calendar.types.ts
+/constants
+    /calendar.constants.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* Modular architecture
+* Custom hooks for logic separation
+* Clean and scalable structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## ⚙️ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/calendar-app.git
+cd calendar-app
 ```
-# CalendarApp
+
+---
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 3. Run the development server
+
+```bash
+npm run dev
+```
+
+---
+
+### 4. Open in browser
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🛠️ Available Scripts
+
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run start    # Run production build
+npm run lint     # Run lint checks
+```
+
+---
+
+## 📱 Responsiveness
+
+* Fully optimized for:
+
+  * Desktop
+  * Tablet
+  * Mobile devices
+
+---
+
+## 🎯 Key Highlights
+
+* Strong focus on **UI/UX design**
+* Clean **component-based architecture**
+* Advanced features like:
+
+  * Dynamic theming
+  * Heatmap visualization
+  * Multi-range selection
+
+---
+
+## 🚀 Future Improvements
+
+* Drag-to-select range
+* Cloud sync / backend support
+* Collaboration features
+* AI-based event suggestions
+
+---
+
+## 👨‍💻 Author
+
+Developed by *Samman Varshney*
+
+---
+
+## 📌 Note
+
+This project is frontend-focused and uses **localStorage** for persistence. No backend is required.
+
+---
