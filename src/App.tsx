@@ -1,9 +1,11 @@
-import Calendar from "./components/Calendar/Calendar"
+import Calendar from "./components/Calendar/Calendar";
 
 function App() {
   return (
-    <Calendar />
-  )
+    <div className="">    <Calendar /></div>
+
+
+  );
 }
 
-export default App
+export default App;
