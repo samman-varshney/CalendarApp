@@ -153,7 +153,7 @@ export default function Calendar() {
             minHeight: '100vh',
             padding: isMob ? '12px' : '20px 24px',
             transition: 'background 0.35s ease',
-            paddingTop: "200px"
+            paddingTop: "170px"
         }}>
             <style>{`
                 @keyframes fadeUp {
