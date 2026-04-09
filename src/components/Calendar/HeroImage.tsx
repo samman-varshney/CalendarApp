@@ -9,7 +9,7 @@ export interface HeroImageProps {
     onUpload: (img: string) => void;
 }
 
-export function HeroImage({ month, year, theme, custom, onUpload }: HeroImageProps) {
+export function HeroImage({ year, theme, custom, onUpload }: HeroImageProps) {
     const [err, setErr] = useState(false);
     const ref = useRef<HTMLInputElement>(null);
     const src = (!err && custom) ? custom : theme.img;

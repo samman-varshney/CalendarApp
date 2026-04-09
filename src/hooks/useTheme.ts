@@ -18,7 +18,6 @@ export function useTheme(month: number, dark: boolean, customImg: string | null)
 
     return useMemo(() => {
         const accent = extracted || base.accent;
-        const accentLight = shiftHex(accent, 80);
         const accentXLight = shiftHex(accent, 110);
 
         const D = {
