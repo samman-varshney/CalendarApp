@@ -174,7 +174,7 @@ export default function Calendar() {
                 display: isMob ? 'block' : 'grid',
                 gridTemplateColumns: 'minmax(288px,358px) 1fr',
                 gap: 20,
-                alignItems: 'stretch',
+                alignItems: 'start',
             }}>
                 <div
                     ref={calRef}
