@@ -89,6 +89,8 @@ export default function Calendar() {
 
     const handleDay = useCallback((day: number) => {
         if (!pickStart) {
+            setRanges([]);
+            setRangeTooltip(null);
             setPickStart({ d: day, m: month, y: year });
         } else {
             let s = pickStart;
